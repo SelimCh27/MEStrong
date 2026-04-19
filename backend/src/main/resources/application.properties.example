@@ -1,0 +1,5 @@
+spring.datasource.url=jdbc:mariadb://localhost:3306/mestrongdb
+spring.datasource.username=root
+spring.datasource.password=DEIN_PASSWORT
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=validate
