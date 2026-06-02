@@ -12,7 +12,6 @@ public interface ExerciseSetRepository extends JpaRepository<ExerciseSet, Long> 
 
     List<ExerciseSet> findByTrainingSessionIdOrderByCreatedAtAsc(Long sessionId);
 
-    // 1:1 Query aus dem MEStrong Leitfaden für das Liniendiagramm
     @Query("SELECT s.completedAt, AVG(es.weight) FROM ExerciseSet es"
             + " JOIN es.trainingSession s"
             + " WHERE s.user.id = :userId AND es.exercise = :exercise"

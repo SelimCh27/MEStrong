@@ -18,10 +18,10 @@ public class TrainingSession {
     @JoinColumn(name = "plan_day_id")
     private PlanDay planDay;
 
-    @Column(name = "started_at", nullable = false)
+    @Column(name = "start_time", nullable = false)
     private ZonedDateTime startedAt = ZonedDateTime.now();
 
-    @Column(name = "completed_at")
+    @Column(name = "end_time")
     private ZonedDateTime completedAt;
 
     @Column(columnDefinition = "TEXT")

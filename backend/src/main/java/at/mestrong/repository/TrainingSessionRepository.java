@@ -7,7 +7,5 @@ import java.util.List;
 
 @Repository
 public interface TrainingSessionRepository extends JpaRepository<TrainingSession, Long> {
-
-    // Holt exakt die letzten 10 Einheiten sortiert nach Abschlussdatum (Vorgabe aus Leitfaden)
     List<TrainingSession> findTop10ByUserIdOrderByCompletedAtDesc(Long userId);
 }

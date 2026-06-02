@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 @Entity
-@Table(name = "exercise_sets")
+@Table(name = "exercises")
 public class ExerciseSet {
 
     @Id
@@ -28,7 +28,7 @@ public class ExerciseSet {
     @Column(nullable = false)
     private int reps;
 
-    @Column(name = "created_at", nullable = false)
+    @Column(name = "creation", nullable = false)
     private ZonedDateTime createdAt = ZonedDateTime.now();
 
     public Long getId() { return id; }
