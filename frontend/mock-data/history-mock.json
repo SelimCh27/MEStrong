@@ -1,0 +1,44 @@
+[
+  {
+    "sessionId": 41,
+    "completedAt": "2026-06-08T17:45:00+02:00",
+    "totalSets": 18,
+    "duration": 62,
+    "exercises": ["Bankdrücken", "Klimmzüge", "Schulterdrücken", "Rudern", "Trizeps Pushdown"]
+  },
+  {
+    "sessionId": 40,
+    "completedAt": "2026-06-06T18:10:00+02:00",
+    "totalSets": 17,
+    "duration": 58,
+    "exercises": ["Kniebeugen", "Rumänisches Kreuzheben", "Beinpresse", "Beinstrecker", "Wadenheben"]
+  },
+  {
+    "sessionId": 39,
+    "completedAt": "2026-06-04T17:30:00+02:00",
+    "totalSets": 16,
+    "duration": 55,
+    "exercises": ["Schrägbankdrücken", "Latzug", "Seitheben", "Face Pulls", "Bizeps Curls"]
+  },
+  {
+    "sessionId": 38,
+    "completedAt": "2026-06-02T18:00:00+02:00",
+    "totalSets": 17,
+    "duration": 60,
+    "exercises": ["Frontkniebeugen", "Hip Thrust", "Ausfallschritte", "Beinbeuger", "Wadenheben sitzend"]
+  },
+  {
+    "sessionId": 37,
+    "completedAt": "2026-05-30T17:20:00+02:00",
+    "totalSets": 18,
+    "duration": 63,
+    "exercises": ["Bankdrücken", "Klimmzüge", "Schulterdrücken", "Rudern", "Trizeps Pushdown"]
+  },
+  {
+    "sessionId": 36,
+    "completedAt": "2026-05-28T18:15:00+02:00",
+    "totalSets": 16,
+    "duration": 57,
+    "exercises": ["Kniebeugen", "Rumänisches Kreuzheben", "Beinpresse", "Beinstrecker", "Wadenheben"]
+  }
+]

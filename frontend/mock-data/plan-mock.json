@@ -1,0 +1,55 @@
+{
+  "goal": "MUSCLE_GAIN",
+  "days": 4,
+  "splitType": "UPPER_LOWER",
+  "weeks": [
+    {
+      "day": "Montag",
+      "dayId": 1,
+      "focus": "Oberkörper",
+      "exercises": [
+        { "name": "Bankdrücken", "sets": 4, "reps": "8-12", "type": "COMPOUND" },
+        { "name": "Klimmzüge", "sets": 3, "reps": "6-10", "type": "COMPOUND" },
+        { "name": "Schulterdrücken", "sets": 3, "reps": "8-12", "type": "COMPOUND" },
+        { "name": "Rudern", "sets": 3, "reps": "10-12", "type": "COMPOUND" },
+        { "name": "Trizeps Pushdown", "sets": 3, "reps": "12-15", "type": "ISOLATION" }
+      ]
+    },
+    {
+      "day": "Dienstag",
+      "dayId": 2,
+      "focus": "Unterkörper",
+      "exercises": [
+        { "name": "Kniebeugen", "sets": 4, "reps": "6-10", "type": "COMPOUND" },
+        { "name": "Rumänisches Kreuzheben", "sets": 3, "reps": "8-10", "type": "COMPOUND" },
+        { "name": "Beinpresse", "sets": 3, "reps": "10-12", "type": "COMPOUND" },
+        { "name": "Beinstrecker", "sets": 3, "reps": "12-15", "type": "ISOLATION" },
+        { "name": "Wadenheben", "sets": 4, "reps": "12-20", "type": "ISOLATION" }
+      ]
+    },
+    {
+      "day": "Donnerstag",
+      "dayId": 3,
+      "focus": "Oberkörper",
+      "exercises": [
+        { "name": "Schrägbankdrücken", "sets": 4, "reps": "8-12", "type": "COMPOUND" },
+        { "name": "Latzug", "sets": 3, "reps": "8-12", "type": "COMPOUND" },
+        { "name": "Seitheben", "sets": 3, "reps": "12-15", "type": "ISOLATION" },
+        { "name": "Face Pulls", "sets": 3, "reps": "15-20", "type": "ISOLATION" },
+        { "name": "Bizeps Curls", "sets": 3, "reps": "10-12", "type": "ISOLATION" }
+      ]
+    },
+    {
+      "day": "Freitag",
+      "dayId": 4,
+      "focus": "Unterkörper",
+      "exercises": [
+        { "name": "Frontkniebeugen", "sets": 3, "reps": "8-10", "type": "COMPOUND" },
+        { "name": "Hip Thrust", "sets": 4, "reps": "8-12", "type": "COMPOUND" },
+        { "name": "Ausfallschritte", "sets": 3, "reps": "10-12", "type": "COMPOUND" },
+        { "name": "Beinbeuger", "sets": 3, "reps": "12-15", "type": "ISOLATION" },
+        { "name": "Wadenheben sitzend", "sets": 4, "reps": "15-20", "type": "ISOLATION" }
+      ]
+    }
+  ]
+}
