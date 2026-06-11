@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0;url=pages/login.html">
+  <title>MEStrong</title>
+</head>
+<body>
+  <script src="js/config.js"></script>
+  <script src="js/mock-data.js"></script>
+  <script src="js/utils.js"></script>
+  <script>
+    if (getToken()) {
+      window.location.replace('pages/dashboard.html');
+    } else {
+      window.location.replace('pages/login.html');
+    }
+  </script>
+</body>
+</html>
