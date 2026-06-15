@@ -10,7 +10,9 @@ import java.util.List;
 @Repository
 public interface ExerciseSetRepository extends JpaRepository<ExerciseSet, Long> {
 
-    List<ExerciseSet> findByTrainingSessionIdOrderByCreatedAtAsc(Long sessionId);
+    List<ExerciseSet> findByTrainingSession_IdOrderByCreatedAtAsc(Long sessionId);
+
+    long countByTrainingSession_Id(Long sessionId);
 
     @Query("SELECT s.completedAt, AVG(es.weight) FROM ExerciseSet es"
             + " JOIN es.trainingSession s"

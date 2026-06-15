@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface TrainingSessionRepository extends JpaRepository<TrainingSession, Long> {
-    List<TrainingSession> findTop10ByUserIdOrderByCompletedAtDesc(Long userId);
+    List<TrainingSession> findTop10ByUser_IdAndCompletedAtIsNotNullOrderByCompletedAtDesc(Long userId);
 }

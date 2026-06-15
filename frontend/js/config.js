@@ -1,5 +1,5 @@
 const MEStrongConfig = {
-  USE_MOCK: true,
+  USE_MOCK: false,
   API_BASE: 'http://localhost:8080/api',
   MOCK_BASE: '../mock-data',
   TOKEN_KEY: 'mestrong_token',

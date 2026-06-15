@@ -30,8 +30,15 @@ async function apiFetch(endpoint, options = {}) {
   if (!response.ok) {
     let message = 'Ein Fehler ist aufgetreten';
     try {
-      const err = await response.json();
-      message = err.error || message;
+      const text = await response.text();
+      if (text) {
+        try {
+          const err = JSON.parse(text);
+          message = err.error || err.message || text;
+        } catch {
+          message = text;
+        }
+      }
     } catch {}
     throw new ApiError(message, response.status);
   }

@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/session")
 public class SessionController {
 
@@ -32,15 +33,16 @@ public class SessionController {
         User user = (User) auth.getPrincipal();
         String exercise = (String) payload.get("exercise");
         BigDecimal weight = new BigDecimal(payload.get("weight").toString());
-        int reps = (Integer) payload.get("reps");
+        int reps = ((Number) payload.get("reps")).intValue();
 
         Map<String, Object> result = sessionService.addSet(sessionId, exercise, weight, reps, user);
         return ResponseEntity.status(201).body(result);
     }
 
     @PutMapping("/{sessionId}/complete")
-    public ResponseEntity<?> completeSession(@PathVariable Long sessionId) {
-        TrainingSession session = sessionService.completeSession(sessionId);
+    public ResponseEntity<?> completeSession(@PathVariable Long sessionId, Authentication auth) {
+        User user = (User) auth.getPrincipal();
+        TrainingSession session = sessionService.completeSession(sessionId, user);
         return ResponseEntity.ok(Map.of(
                 "completedAt", session.getCompletedAt()
         ));

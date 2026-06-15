@@ -37,13 +37,16 @@ public class SessionService {
 
     public Map<String, Object> addSet(Long sessionId, String exerciseName, BigDecimal weight, int reps, User user) {
         TrainingSession session = sessionRepo.findById(sessionId).orElseThrow();
+        if (!session.getUser().getId().equals(user.getId())) {
+            throw new IllegalStateException("Session does not belong to user");
+        }
 
         ExerciseSet set = new ExerciseSet();
         set.setTrainingSession(session);
         set.setExercise(exerciseName);
         set.setWeight(weight);
         set.setReps(reps);
-        set.setSetNumber((int) setRepo.count() + 1); // Simplistic count
+        set.setSetNumber((int) setRepo.countByTrainingSession_Id(sessionId) + 1);
         set = setRepo.save(set);
 
         // 1RM Calculation (Epley Formula)
@@ -61,8 +64,11 @@ public class SessionService {
         return Map.of("setId", set.getId(), "orm", calculatedOrm);
     }
 
-    public TrainingSession completeSession(Long sessionId) {
+    public TrainingSession completeSession(Long sessionId, User user) {
         TrainingSession session = sessionRepo.findById(sessionId).orElseThrow();
+        if (!session.getUser().getId().equals(user.getId())) {
+            throw new IllegalStateException("Session does not belong to user");
+        }
         session.setCompletedAt(ZonedDateTime.now());
         return sessionRepo.save(session);
     }

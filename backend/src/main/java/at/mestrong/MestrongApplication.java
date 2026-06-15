@@ -1,0 +1,12 @@
+package at.mestrong;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MestrongApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MestrongApplication.class, args);
+    }
+}

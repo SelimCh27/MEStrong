@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface OneRepMaxRepository extends JpaRepository<OneRepMax, Long> {
-    List<OneRepMax> findByUserIdAndExerciseOrderByCalculatedAtAsc(Long userId, String exercise);
+    List<OneRepMax> findByUser_IdAndExerciseOrderByCalculatedAtAsc(Long userId, String exercise);
 }

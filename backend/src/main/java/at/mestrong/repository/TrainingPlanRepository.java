@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TrainingPlanRepository extends JpaRepository<TrainingPlan, Long> {
-    TrainingPlan findByUserId(Long userId);
+    TrainingPlan findByUser_Id(Long userId);
 }

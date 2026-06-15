@@ -4,7 +4,7 @@ let currentPlan = null;
 
 async function generatePlan(goal, days) {
   const params = new URLSearchParams({ goal, days: String(days) });
-  return apiFetch(`/plan/generate?${params}`, { mockKey: 'plan-generate' });
+  return apiFetch(`/plan/generate?${params}`, { method: 'POST', mockKey: 'plan-generate' });
 }
 
 async function savePlan(goal, days) {
@@ -108,7 +108,6 @@ function initDaysSelect() {
       currentPlan.goal = selectedGoal;
       currentPlan.days = selectedDays;
       storePlan(currentPlan);
-      await savePlan(selectedGoal, selectedDays);
       showToast('Trainingsplan erstellt', 'success');
       window.location.href = 'plan.html';
     } catch (err) {

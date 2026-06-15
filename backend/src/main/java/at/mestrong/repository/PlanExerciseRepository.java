@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface PlanExerciseRepository extends JpaRepository<PlanExercise, Long> {
-    List<PlanExercise> findByPlanDayId(Long dayId);
+    List<PlanExercise> findByPlanDay_Id(Long dayId);
 }

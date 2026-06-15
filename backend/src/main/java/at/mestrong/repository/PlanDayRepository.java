@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface PlanDayRepository extends JpaRepository<PlanDay, Long> {
-    List<PlanDay> findByTrainingPlanIdOrderByDayOrderAsc(Long planId);
+    List<PlanDay> findByTrainingPlan_IdOrderByDayOrderAsc(Long planId);
 }
